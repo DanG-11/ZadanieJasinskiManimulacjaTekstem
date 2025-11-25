@@ -31,15 +31,32 @@
 //    Console.WriteLine("Niepoprawny wybór.");
 //}
 
-//Zad 2
-Console.WriteLine("Wpisz tekst:");
-string OGTekst2 = Console.ReadLine();
-string TekstBezSpacji = OGTekst2.Trim();
-int DlugoscTekstuBezSpacji = Convert.ToInt32(TekstBezSpacji.Length);
-string PierwszaLiteraTekstuBezSpacji = TekstBezSpacji.Substring(0, 1);
-string OstatniaLiteraTekstuBezSpacji = TekstBezSpacji.Substring(DlugoscTekstuBezSpacji - 1, 1);
+////Zad 2
+//Console.WriteLine("Wpisz tekst:");
+//string OGTekst2 = Console.ReadLine();
+//string TekstBezSpacji = OGTekst2.Trim();
+//int DlugoscTekstuBezSpacji = Convert.ToInt32(TekstBezSpacji.Length);
+//string PierwszaLiteraTekstuBezSpacji = TekstBezSpacji.Substring(0, 1);
+//string OstatniaLiteraTekstuBezSpacji = TekstBezSpacji.Substring(DlugoscTekstuBezSpacji - 1, 1);
 
-Console.WriteLine("Tekst bez spacji na początku i końcu: " + TekstBezSpacji);
-Console.WriteLine("Długość tekstu: " + DlugoscTekstuBezSpacji);
-Console.WriteLine("Pierwsza litera tekstu: " + PierwszaLiteraTekstuBezSpacji);
-Console.WriteLine("Ostatnia litera tekstu: " + OstatniaLiteraTekstuBezSpacji);
+//Console.WriteLine("Tekst bez spacji na początku i końcu: " + TekstBezSpacji);
+//Console.WriteLine("Długość tekstu: " + DlugoscTekstuBezSpacji);
+//Console.WriteLine("Pierwsza litera tekstu: " + PierwszaLiteraTekstuBezSpacji);
+//Console.WriteLine("Ostatnia litera tekstu: " + OstatniaLiteraTekstuBezSpacji);
+
+//Zad 3
+Console.WriteLine("Wpisz tekst:");
+string OGTekst3 = Console.ReadLine();
+Console.WriteLine("Jakie znaki wyliczyć:");
+char JakiZnak = Console.ReadKey().KeyChar;
+
+int zad3occurences = 0;
+
+for (int x = 0; x < OGTekst3.Length; x++)
+{
+    if (JakiZnak == OGTekst3[x])
+    {
+        zad3occurences++;
+    }
+}
+Console.WriteLine($"litera {JakiZnak} wystepuje {zad3occurences} razy");
