@@ -60,3 +60,14 @@ for (int x = 0; x < OGTekst3.Length; x++)
     }
 }
 Console.WriteLine($"\nLitera: {JakiZnak}, wystepuje {zad3occurences} razy.");
+
+//Zad 4
+
+Console.WriteLine("Wypisz zdanie:");
+string OGTekst4 = Console.ReadLine();
+Console.WriteLine("Jaki znak chcesz zamienić?");
+string UserReplacementInputFrom = Convert.ToString(Console.ReadLine());
+Console.WriteLine("Na jaki?");
+string UserReplacementInputTo = Convert.ToString(Console.ReadLine());
+string ReplacedText = OGTekst4.Replace(UserReplacementInputFrom, UserReplacementInputTo);
+Console.WriteLine(ReplacedText);
