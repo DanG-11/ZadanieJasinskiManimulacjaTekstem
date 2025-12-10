@@ -72,14 +72,34 @@
 //string ReplacedText = OGTekst4.Replace(UserReplacementInputFrom, UserReplacementInputTo);
 //Console.WriteLine(ReplacedText);
 
-//Zad 5
-Console.WriteLine("Wypisz zdanie:");
-string OGTekst5 = Console.ReadLine();
-char[] OGTekst5Array = OGTekst5.ToCharArray();
-string TekstOdwrocony = string.Empty;
-for (int i = 0; i < OGTekst5.Length; i++)
-{
-    
-    TekstOdwrocony = TekstOdwrocony + OGTekst5Array[OGTekst5.Length - 1 - i];
-}
-Console.WriteLine(TekstOdwrocony);
+////Zad 5
+//Console.WriteLine("Wypisz zdanie:");
+//string OGTekst5 = Console.ReadLine();
+//char[] OGTekst5Array = OGTekst5.ToCharArray();
+//string Zad5TekstOdwrocony = string.Empty;
+//for (int i = 0; i < OGTekst5.Length; i++)
+//{
+
+//    Zad5TekstOdwrocony = Zad5TekstOdwrocony + OGTekst5Array[OGTekst5.Length - 1 - i];
+//}
+//Console.WriteLine(Zad5TekstOdwrocony);
+
+////Zad 6
+//Console.WriteLine("Wypisz zdanie:");
+//string OGTekst6 = Console.ReadLine().Replace(" ", "").ToLower();
+//char[] OGTekst6Array = OGTekst6.ToCharArray();
+//string Zad6TekstOdwrocony = string.Empty;
+//for (int i = 0; i < OGTekst6.Length; i++)
+//{
+
+//    Zad6TekstOdwrocony = Zad6TekstOdwrocony + OGTekst6Array[OGTekst6.Length - 1 - i];
+//}
+
+//if (Zad6TekstOdwrocony == OGTekst6)
+//{
+//    Console.WriteLine("TAK");
+//}
+//else
+//{
+//    Console.WriteLine("NIE");
+//}
