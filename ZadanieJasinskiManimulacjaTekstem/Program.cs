@@ -115,3 +115,14 @@
 //    IloscSlow = x;
 //}
 //Console.WriteLine(IloscSlow);
+
+////Zad 8
+//Console.WriteLine("Wypisz tekst:");
+//string OGTekst8 = Console.ReadLine().ToString().Trim();
+//string[] OGTekst8Split = OGTekst8.Split(' ');
+//string Zad8Akronim = String.Empty;
+//for (int i = 0; i < OGTekst8Split.Length; i++)
+//{
+//    Zad8Akronim = Zad8Akronim + OGTekst8Split[i][0];
+//}
+//Console.WriteLine(Zad8Akronim);
