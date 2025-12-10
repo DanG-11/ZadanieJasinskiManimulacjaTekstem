@@ -126,3 +126,12 @@
 //    Zad8Akronim = Zad8Akronim + OGTekst8Split[i][0];
 //}
 //Console.WriteLine(Zad8Akronim);
+
+//Zad 9
+Console.WriteLine("Wypisz tekst:");
+string OGTekst9 = Console.ReadLine().Trim();
+
+int NaKtorymZnakuMalpa = OGTekst9.IndexOf("@") + 1;
+
+string OGTekst9Split = OGTekst9.Substring(NaKtorymZnakuMalpa, (OGTekst9.Length - (NaKtorymZnakuMalpa)));
+Console.WriteLine(OGTekst9Split);
