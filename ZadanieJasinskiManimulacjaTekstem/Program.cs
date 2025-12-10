@@ -103,3 +103,15 @@
 //{
 //    Console.WriteLine("NIE");
 //}
+
+////Zad 7
+//Console.WriteLine("Wypisz tekst:");
+//string OGTekst7 = Console.ReadLine();
+//string[] OGTekst7Split = OGTekst7.Trim().Split(' ');
+//int IloscSlow = 0;
+
+//for (int x = 0; x <= OGTekst7Split.Length; x++)
+//{
+//    IloscSlow = x;
+//}
+//Console.WriteLine(IloscSlow);
