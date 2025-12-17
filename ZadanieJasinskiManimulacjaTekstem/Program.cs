@@ -231,13 +231,30 @@
 //        Console.WriteLine("Nie znaleziono słowa.");
 //    }
 
-//Zad 13
-Console.WriteLine("Wypisz swoje imię i nazwisko:");
-string OGTekst13 = Console.ReadLine();
-string[] listOGTekst13 = OGTekst13.ToUpper().Trim().Split(" ");
+////Zad 13
+//Console.WriteLine("Wypisz swoje imię i nazwisko:");
+//string OGTekst13 = Console.ReadLine();
+//string[] listOGTekst13 = OGTekst13.ToUpper().Trim().Split(" ");
 
-string imie = listOGTekst13[0];
-string nazwisko = listOGTekst13[1];
-listOGTekst13[0] = imie.Substring(0, 1) + listOGTekst13[0].Substring(1).ToLower();
-listOGTekst13[1] = nazwisko.Substring(0, 1) + listOGTekst13[1].Substring(1).ToLower();
-Console.WriteLine(listOGTekst13[0] + " " + listOGTekst13[1]);
+//string imie = listOGTekst13[0];
+//string nazwisko = listOGTekst13[1];
+//listOGTekst13[0] = imie.Substring(0, 1) + listOGTekst13[0].Substring(1).ToLower();
+//listOGTekst13[1] = nazwisko.Substring(0, 1) + listOGTekst13[1].Substring(1).ToLower();
+//Console.WriteLine(listOGTekst13[0] + " " + listOGTekst13[1]);
+
+//Zad 14
+Console.WriteLine("Wypisz tekst:");
+string OGTekst13 = Console.ReadLine().Trim();
+string tekstDoWypisania14 = string.Empty;
+for (int i14 = 0; i14 < OGTekst13.Length; i14++)
+{
+    if (i14 % 2 == 0)
+    {
+        tekstDoWypisania14 += Char.ToUpper(OGTekst13[i14]);
+    }
+    else if (i14 % 2 == 1)
+    {
+        tekstDoWypisania14 += Char.ToLower(OGTekst13[i14]);
+    }
+}
+Console.WriteLine(tekstDoWypisania14);
