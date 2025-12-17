@@ -288,27 +288,49 @@
 //    Console.WriteLine("Wiek: " + listOGTekst16[2]);
 //}
 
-//Zad 17
-Console.WriteLine("Proszę wpisać zdanie");
-string OGTekst17 = Console.ReadLine().ToString().Trim();
-char[] listOGTekst17 = OGTekst17.ToLower().ToCharArray();
-string samogloski = "aeiouy";
-char[] listSamogloski = samogloski.ToCharArray();
-int spolgloskiIlosc = 0;
-int samogloskiIlosc = 0;
-for (int i = 0; i < OGTekst17.Length; i++)
+////Zad 17
+//Console.WriteLine("Wypisz tekst:");
+//string OGTekst17 = Console.ReadLine().ToString().Trim();
+//char[] listOGTekst17 = OGTekst17.ToLower().ToCharArray();
+//string samogloski = "aeiouy";
+//char[] listSamogloski = samogloski.ToCharArray();
+//int spolgloskiIlosc = 0;
+//int samogloskiIlosc = 0;
+//for (int i = 0; i < OGTekst17.Length; i++)
+//{
+//    if (char.IsLetter(listOGTekst17[i]))
+//    {
+//        if (listOGTekst17[i] == listSamogloski[0] || listOGTekst17[i] == listSamogloski[1] || listOGTekst17[i] == listSamogloski[2] || listOGTekst17[i] == listSamogloski[3] || listOGTekst17[i] == listSamogloski[4] || listOGTekst17[i] == listSamogloski[5])
+//        {
+//            samogloskiIlosc++;
+//        }
+//        else
+//        {
+//            spolgloskiIlosc++;
+//        }
+//    }
+//}
+//Console.WriteLine("Liczba samogłosek: " + samogloskiIlosc);
+//Console.WriteLine("Liczba spółgłosek: " + spolgloskiIlosc);
+
+//zad 18
+Console.WriteLine("Wypisz tekst:");
+string OGTekst18 = Console.ReadLine().Trim().ToString();
+Console.WriteLine("Wypisz kod:");
+string kod18 = Console.ReadLine().Trim().ToString();
+int kod = int.Parse(kod18);
+string zaszyfrowanyTekst = string.Empty;
+foreach (char n in OGTekst18)
 {
-    if (char.IsLetter(listOGTekst17[i]))
+    if (char.IsLetter(n))
     {
-        if (listOGTekst17[i] == listSamogloski[0] || listOGTekst17[i] == listSamogloski[1] || listOGTekst17[i] == listSamogloski[2] || listOGTekst17[i] == listSamogloski[3] || listOGTekst17[i] == listSamogloski[4] || listOGTekst17[i] == listSamogloski[5])
-        {
-            samogloskiIlosc++;
-        }
-        else
-        {
-            spolgloskiIlosc++;
-        }
+        char offset = char.IsUpper(n) ? 'A' : 'a';
+        char shifted = (char)(((n - offset + kod) % 26) + offset);
+        zaszyfrowanyTekst += shifted;
+    }
+    else
+    {
+        zaszyfrowanyTekst += n;
     }
 }
-Console.WriteLine("Liczba samogłosek: " + samogloskiIlosc);
-Console.WriteLine("Liczba spółgłosek: " + spolgloskiIlosc);
+Console.WriteLine(zaszyfrowanyTekst);
