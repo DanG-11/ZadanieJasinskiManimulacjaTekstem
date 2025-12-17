@@ -217,16 +217,27 @@
 //string EndString11 = string.Join(" ", listaOGTekstu11);
 //Console.WriteLine(EndString11);
 
-//Zad 12
-string dlugiTekst12 = "The city woke up slowly, stretching its streets under the pale morning light, while unseen stories quietly unfolded behind every closed door.";
-Console.WriteLine("Wypisz słowo:");
-string OGTekst12 = Console.ReadLine();
-    if (dlugiTekst12.Contains(OGTekst12))
-    {
-        int index12 = dlugiTekst12.IndexOf(OGTekst12);
-        Console.WriteLine($"Znaleziono na indeksie: {index12}");
-    }
-    else
-    {
-        Console.WriteLine("Nie znaleziono słowa.");
-    }
+////Zad 12
+//string dlugiTekst12 = "The city woke up slowly, stretching its streets under the pale morning light, while unseen stories quietly unfolded behind every closed door.";
+//Console.WriteLine("Wypisz słowo:");
+//string OGTekst12 = Console.ReadLine();
+//    if (dlugiTekst12.Contains(OGTekst12))
+//    {
+//        int index12 = dlugiTekst12.IndexOf(OGTekst12);
+//        Console.WriteLine($"Znaleziono na indeksie: {index12}");
+//    }
+//    else
+//    {
+//        Console.WriteLine("Nie znaleziono słowa.");
+//    }
+
+//Zad 13
+Console.WriteLine("Wypisz swoje imię i nazwisko:");
+string OGTekst13 = Console.ReadLine();
+string[] listOGTekst13 = OGTekst13.ToUpper().Trim().Split(" ");
+
+string imie = listOGTekst13[0];
+string nazwisko = listOGTekst13[1];
+listOGTekst13[0] = imie.Substring(0, 1) + listOGTekst13[0].Substring(1).ToLower();
+listOGTekst13[1] = nazwisko.Substring(0, 1) + listOGTekst13[1].Substring(1).ToLower();
+Console.WriteLine(listOGTekst13[0] + " " + listOGTekst13[1]);
