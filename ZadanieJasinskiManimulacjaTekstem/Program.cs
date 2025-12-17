@@ -272,18 +272,43 @@
 //odwroconyTekst.Trim();
 //Console.WriteLine(odwroconyTekst);
 
-//Zad 16
-Console.WriteLine("Wypisz tekst:");
-string OGTekst16 = Console.ReadLine().Trim();
-string[] listOGTekst16 = OGTekst16.Split(",");
+////Zad 16
+//Console.WriteLine("Wypisz tekst:");
+//string OGTekst16 = Console.ReadLine().Trim();
+//string[] listOGTekst16 = OGTekst16.Split(",");
 
-if(listOGTekst16.Length != 3)
+//if(listOGTekst16.Length != 3)
+//{
+//    Console.WriteLine("Nie tak wpisałeś tekst.");
+//}
+//else
+//{
+//    Console.WriteLine("Imię: " + listOGTekst16[0]);
+//    Console.WriteLine("Nazwisko: " + listOGTekst16[1]);
+//    Console.WriteLine("Wiek: " + listOGTekst16[2]);
+//}
+
+//Zad 17
+Console.WriteLine("Proszę wpisać zdanie");
+string OGTekst17 = Console.ReadLine().ToString().Trim();
+char[] listOGTekst17 = OGTekst17.ToLower().ToCharArray();
+string samogloski = "aeiouy";
+char[] listSamogloski = samogloski.ToCharArray();
+int spolgloskiIlosc = 0;
+int samogloskiIlosc = 0;
+for (int i = 0; i < OGTekst17.Length; i++)
 {
-    Console.WriteLine("Nie tak wpisałeś tekst.");
+    if (char.IsLetter(listOGTekst17[i]))
+    {
+        if (listOGTekst17[i] == listSamogloski[0] || listOGTekst17[i] == listSamogloski[1] || listOGTekst17[i] == listSamogloski[2] || listOGTekst17[i] == listSamogloski[3] || listOGTekst17[i] == listSamogloski[4] || listOGTekst17[i] == listSamogloski[5])
+        {
+            samogloskiIlosc++;
+        }
+        else
+        {
+            spolgloskiIlosc++;
+        }
+    }
 }
-else
-{
-    Console.WriteLine("Imię: " + listOGTekst16[0]);
-    Console.WriteLine("Nazwisko: " + listOGTekst16[1]);
-    Console.WriteLine("Wiek: " + listOGTekst16[2]);
-}
+Console.WriteLine("Liczba samogłosek: " + samogloskiIlosc);
+Console.WriteLine("Liczba spółgłosek: " + spolgloskiIlosc);
