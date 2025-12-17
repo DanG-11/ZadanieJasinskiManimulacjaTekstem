@@ -140,8 +140,8 @@
 //Console.Write("Wypisz tekst:");
 //string OGTekst10 = Console.ReadLine();
 //Console.WriteLine("Wypisz zakazane słowa:");
-//string[] zalazaneZlowa10 = Console.ReadLine().Split(" ").ToArray();
-//string[] listaOGTekstu10 = OGTekst10.Trim().Split(" ").ToArray();
+//string[] zalazaneZlowa10 = Console.ReadLine().Split(" ");
+//string[] listaOGTekstu10 = OGTekst10.Trim().Split(" ");
 //string pelneSlowo = string.Empty;
 //foreach(string slowo in listaOGTekstu10)
 //{
@@ -164,55 +164,69 @@
 //pelneSlowo.Trim();
 //Console.WriteLine(pelneSlowo);
 
-//Zad 11
-Console.WriteLine("Wypisz tekst:");
-string OGTekst11 = Console.ReadLine();
-string[] listaOGTekstu11 = OGTekst11.Trim().Split(" ").ToArray();
-string[] listaCyfr11 = "1 2 3 4 5 6 7 8 9 0".Trim().Split(" ").ToArray();
+////Zad 11
+//Console.WriteLine("Wypisz tekst:");
+//string OGTekst11 = Console.ReadLine();
+//string[] listaOGTekstu11 = OGTekst11.Trim().Split(" ");
+//string[] listaCyfr11 = "1 2 3 4 5 6 7 8 9 0".Trim().Split(" ");
 
-for (int i11 = 0; i11 < listaOGTekstu11.Length; i11++)
-{
-    for (int j11 = 0; j11 < listaCyfr11.Length; j11++)
+//for (int i11 = 0; i11 < listaOGTekstu11.Length; i11++)
+//{
+//    for (int j11 = 0; j11 < listaCyfr11.Length; j11++)
+//    {
+//        if (listaOGTekstu11[i11] == listaCyfr11[j11])
+//        {
+//            string ReplaceWith = string.Empty;
+//            switch (listaOGTekstu11[i11])
+//            {
+//                case "1":
+//                    ReplaceWith = "jeden";
+//                    break;
+//                case "2":
+//                    ReplaceWith = "dwa";
+//                    break;
+//                case "3":
+//                    ReplaceWith = "trzy";
+//                    break;
+//                case "4":
+//                    ReplaceWith = "cztery";
+//                    break;
+//                case "5":
+//                    ReplaceWith = "pięć";
+//                    break;
+//                case "6":
+//                    ReplaceWith = "sześć";
+//                    break;
+//                case "7":
+//                    ReplaceWith = "siedem";
+//                    break;
+//                case "8":
+//                    ReplaceWith = "osiem";
+//                    break;
+//                case "9":
+//                    ReplaceWith = "dziewięć";
+//                    break;
+//                case "0":
+//                    ReplaceWith = "zero";
+//                    break;
+//            }
+//            listaOGTekstu11[i11] = listaOGTekstu11[i11].Replace(listaOGTekstu11[i11], ReplaceWith);
+//        }
+//    }
+//}
+//string EndString11 = string.Join(" ", listaOGTekstu11);
+//Console.WriteLine(EndString11);
+
+//Zad 12
+string dlugiTekst12 = "The city woke up slowly, stretching its streets under the pale morning light, while unseen stories quietly unfolded behind every closed door.";
+Console.WriteLine("Wypisz słowo:");
+string OGTekst12 = Console.ReadLine();
+    if (dlugiTekst12.Contains(OGTekst12))
     {
-        if (listaOGTekstu11[i11] == listaCyfr11[j11])
-        {
-            string ReplaceWith = string.Empty;
-            switch (listaOGTekstu11[i11])
-            {
-                case "1":
-                    ReplaceWith = "jeden";
-                    break;
-                case "2":
-                    ReplaceWith = "dwa";
-                    break;
-                case "3":
-                    ReplaceWith = "trzy";
-                    break;
-                case "4":
-                    ReplaceWith = "cztery";
-                    break;
-                case "5":
-                    ReplaceWith = "pięć";
-                    break;
-                case "6":
-                    ReplaceWith = "sześć";
-                    break;
-                case "7":
-                    ReplaceWith = "siedem";
-                    break;
-                case "8":
-                    ReplaceWith = "osiem";
-                    break;
-                case "9":
-                    ReplaceWith = "dziewięć";
-                    break;
-                case "0":
-                    ReplaceWith = "zero";
-                    break;
-            }
-            listaOGTekstu11[i11] = listaOGTekstu11[i11].Replace(listaOGTekstu11[i11], ReplaceWith);
-        }
+        int index12 = dlugiTekst12.IndexOf(OGTekst12);
+        Console.WriteLine($"Znaleziono na indeksie: {index12}");
     }
-}
-string EndString11 = string.Join(" ", listaOGTekstu11);
-Console.WriteLine(EndString11);
+    else
+    {
+        Console.WriteLine("Nie znaleziono słowa.");
+    }
