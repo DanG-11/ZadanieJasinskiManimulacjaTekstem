@@ -313,24 +313,24 @@
 //Console.WriteLine("Liczba samogłosek: " + samogloskiIlosc);
 //Console.WriteLine("Liczba spółgłosek: " + spolgloskiIlosc);
 
-//zad 18
-Console.WriteLine("Wypisz tekst:");
-string OGTekst18 = Console.ReadLine().Trim().ToString();
-Console.WriteLine("Wypisz kod:");
-string kod18 = Console.ReadLine().Trim().ToString();
-int kod = int.Parse(kod18);
-string zaszyfrowanyTekst = string.Empty;
-foreach (char n in OGTekst18)
-{
-    if (char.IsLetter(n))
-    {
-        char offset = char.IsUpper(n) ? 'A' : 'a';
-        char shifted = (char)(((n - offset + kod) % 26) + offset);
-        zaszyfrowanyTekst += shifted;
-    }
-    else
-    {
-        zaszyfrowanyTekst += n;
-    }
-}
-Console.WriteLine(zaszyfrowanyTekst);
+////zad 18
+//Console.WriteLine("Wypisz tekst:");
+//string OGTekst18 = Console.ReadLine().Trim().ToString();
+//Console.WriteLine("Wypisz kod:");
+//string kod18 = Console.ReadLine().Trim().ToString();
+//int kod = int.Parse(kod18);
+//string zaszyfrowanyTekst = string.Empty;
+//foreach (char n in OGTekst18)
+//{
+//    if (char.IsLetter(n))
+//    {
+//        char offset = char.IsUpper(n) ? 'A' : 'a';
+//        char shifted = (char)(((n - offset + kod) % 26) + offset);
+//        zaszyfrowanyTekst += shifted;
+//    }
+//    else
+//    {
+//        zaszyfrowanyTekst += n;
+//    }
+//}
+//Console.WriteLine(zaszyfrowanyTekst);
