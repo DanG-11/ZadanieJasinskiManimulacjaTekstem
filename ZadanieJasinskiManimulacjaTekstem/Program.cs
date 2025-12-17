@@ -259,15 +259,31 @@
 //}
 //Console.WriteLine(tekstDoWypisania14);
 
-//Zad 15
-Console.WriteLine("Wypisz tekst:");
-string OGTekst15 = Console.ReadLine().Trim();
-string[] listaOGTekst15 = OGTekst15.Split(" ");
-string odwroconyTekst = string.Empty;
+////Zad 15
+//Console.WriteLine("Wypisz tekst:");
+//string OGTekst15 = Console.ReadLine().Trim();
+//string[] listaOGTekst15 = OGTekst15.Split(" ");
+//string odwroconyTekst = string.Empty;
 
-for (int x15 = listaOGTekst15.Length -1; x15 >= 0; x15--)
+//for (int x15 = listaOGTekst15.Length -1; x15 >= 0; x15--)
+//{
+//    odwroconyTekst += listaOGTekst15[x15] + " ";
+//}
+//odwroconyTekst.Trim();
+//Console.WriteLine(odwroconyTekst);
+
+//Zad 16
+Console.WriteLine("Wypisz tekst:");
+string OGTekst16 = Console.ReadLine().Trim();
+string[] listOGTekst16 = OGTekst16.Split(",");
+
+if(listOGTekst16.Length != 3)
 {
-    odwroconyTekst += listaOGTekst15[x15] + " ";
+    Console.WriteLine("Nie tak wpisałeś tekst.");
 }
-odwroconyTekst.Trim();
-Console.WriteLine(odwroconyTekst);
+else
+{
+    Console.WriteLine("Imię: " + listOGTekst16[0]);
+    Console.WriteLine("Nazwisko: " + listOGTekst16[1]);
+    Console.WriteLine("Wiek: " + listOGTekst16[2]);
+}
