@@ -242,19 +242,32 @@
 //listOGTekst13[1] = nazwisko.Substring(0, 1) + listOGTekst13[1].Substring(1).ToLower();
 //Console.WriteLine(listOGTekst13[0] + " " + listOGTekst13[1]);
 
-//Zad 14
+////Zad 14
+//Console.WriteLine("Wypisz tekst:");
+//string OGTekst14 = Console.ReadLine().Trim();
+//string tekstDoWypisania14 = string.Empty;
+//for (int i14 = 0; i14 < OGTekst14.Length; i14++)
+//{
+//    if (i14 % 2 == 0)
+//    {
+//        tekstDoWypisania14 += Char.ToUpper(OGTekst14[i14]);
+//    }
+//    else if (i14 % 2 == 1)
+//    {
+//        tekstDoWypisania14 += Char.ToLower(OGTekst14[i14]);
+//    }
+//}
+//Console.WriteLine(tekstDoWypisania14);
+
+//Zad 15
 Console.WriteLine("Wypisz tekst:");
-string OGTekst13 = Console.ReadLine().Trim();
-string tekstDoWypisania14 = string.Empty;
-for (int i14 = 0; i14 < OGTekst13.Length; i14++)
+string OGTekst15 = Console.ReadLine().Trim();
+string[] listaOGTekst15 = OGTekst15.Split(" ");
+string odwroconyTekst = string.Empty;
+
+for (int x15 = listaOGTekst15.Length -1; x15 >= 0; x15--)
 {
-    if (i14 % 2 == 0)
-    {
-        tekstDoWypisania14 += Char.ToUpper(OGTekst13[i14]);
-    }
-    else if (i14 % 2 == 1)
-    {
-        tekstDoWypisania14 += Char.ToLower(OGTekst13[i14]);
-    }
+    odwroconyTekst += listaOGTekst15[x15] + " ";
 }
-Console.WriteLine(tekstDoWypisania14);
+odwroconyTekst.Trim();
+Console.WriteLine(odwroconyTekst);
