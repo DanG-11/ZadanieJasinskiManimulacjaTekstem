@@ -136,30 +136,83 @@
 //string OGTekst9Split = OGTekst9.Substring(NaKtorymZnakuMalpa, (OGTekst9.Length - (NaKtorymZnakuMalpa)));
 //Console.WriteLine(OGTekst9Split);
 
-//Zad 10
-Console.Write("Wypisz tekst:");
-string OGTekst10 = Console.ReadLine();
-Console.WriteLine("Wypisz zakazane słowa:");
-string[] zalazaneZlowa10 = Console.ReadLine().Split(" ").ToArray();
-string[] listaOGTekstu10 = OGTekst10.Split(" ").ToArray();
-string pelneSlowo = string.Empty;
-foreach(string slowo in listaOGTekstu10)
+////Zad 10
+//Console.Write("Wypisz tekst:");
+//string OGTekst10 = Console.ReadLine();
+//Console.WriteLine("Wypisz zakazane słowa:");
+//string[] zalazaneZlowa10 = Console.ReadLine().Split(" ").ToArray();
+//string[] listaOGTekstu10 = OGTekst10.Trim().Split(" ").ToArray();
+//string pelneSlowo = string.Empty;
+//foreach(string slowo in listaOGTekstu10)
+//{
+//    for (int Z10 = 0; Z10 < listaOGTekstu10.Length; Z10++)
+//    {
+//        for (int ZakazaneZ10 = 0; ZakazaneZ10 < zalazaneZlowa10.Length; ZakazaneZ10++)
+//        {
+//            if (listaOGTekstu10[Z10].ToLower() == zalazaneZlowa10[ZakazaneZ10])
+//            {
+//                listaOGTekstu10[Z10] = new string('*', listaOGTekstu10[Z10].Length);
+//            }
+//        }
+//    }
+//}
+
+//foreach(string word in listaOGTekstu10)
+//{
+//     pelneSlowo += word + " ";
+//}
+//pelneSlowo.Trim();
+//Console.WriteLine(pelneSlowo);
+
+//Zad 11
+Console.WriteLine("Wypisz tekst:");
+string OGTekst11 = Console.ReadLine();
+string[] listaOGTekstu11 = OGTekst11.Trim().Split(" ").ToArray();
+string[] listaCyfr11 = "1 2 3 4 5 6 7 8 9 0".Trim().Split(" ").ToArray();
+
+for (int i11 = 0; i11 < listaOGTekstu11.Length; i11++)
 {
-    for (int Z10 = 0; Z10 < listaOGTekstu10.Length; Z10++)
+    for (int j11 = 0; j11 < listaCyfr11.Length; j11++)
     {
-        for (int ZakazaneZ10 = 0; ZakazaneZ10 < zalazaneZlowa10.Length; ZakazaneZ10++)
+        if (listaOGTekstu11[i11] == listaCyfr11[j11])
         {
-            if (listaOGTekstu10[Z10].ToLower() == zalazaneZlowa10[ZakazaneZ10])
+            string ReplaceWith = string.Empty;
+            switch (listaOGTekstu11[i11])
             {
-                listaOGTekstu10[Z10] = new string('*', listaOGTekstu10[Z10].Length);
+                case "1":
+                    ReplaceWith = "jeden";
+                    break;
+                case "2":
+                    ReplaceWith = "dwa";
+                    break;
+                case "3":
+                    ReplaceWith = "trzy";
+                    break;
+                case "4":
+                    ReplaceWith = "cztery";
+                    break;
+                case "5":
+                    ReplaceWith = "pięć";
+                    break;
+                case "6":
+                    ReplaceWith = "sześć";
+                    break;
+                case "7":
+                    ReplaceWith = "siedem";
+                    break;
+                case "8":
+                    ReplaceWith = "osiem";
+                    break;
+                case "9":
+                    ReplaceWith = "dziewięć";
+                    break;
+                case "0":
+                    ReplaceWith = "zero";
+                    break;
             }
+            listaOGTekstu11[i11] = listaOGTekstu11[i11].Replace(listaOGTekstu11[i11], ReplaceWith);
         }
     }
 }
-
-foreach(string word in listaOGTekstu10)
-{
-     pelneSlowo += word + " ";
-}
-pelneSlowo.Trim();
-Console.WriteLine(pelneSlowo);
+string EndString11 = string.Join(" ", listaOGTekstu11);
+Console.WriteLine(EndString11);
